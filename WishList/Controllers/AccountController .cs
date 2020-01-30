@@ -2,8 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity ;
 using WishList.Models ;
+using Microsoft.AspNetCore.Authorization;
+
 namespace WishList.Controllers
 {
+    [Authorize]
     public class AccountController  : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
